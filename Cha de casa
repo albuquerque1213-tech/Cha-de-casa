@@ -1,0 +1,160 @@
+import React, { useEffect, useMemo, useState } from "react";
+import { motion } from "framer-motion";
+
+export default function ConviteChaDeCasa() {
+  const couple = {
+    title: "Chá de Casa",
+    bride: "Carol",
+    groom: "Lucas",
+    headline: "Vamos celebrar nosso novo lar!",
+  };
+
+  const eventDate = useMemo(() => new Date("2025-10-11T16:00:00-03:00"), []);
+
+  const venue = {
+    name: "Casa de Carol",
+    address: "rua leandro barreto 945",
+    mapsUrl: "https://share.google/twTeFDC2e3gLhC7X9",
+  };
+
+  const contact = {
+    whatsapp: "https://wa.me/5581999999999?text=Oi%20quero%20confirmar%20presença%20no%20Chá%20de%20Casa!",
+    form: "https://forms.gle/", // Insira o link completo do formulário se houver
+  };
+
+  const pix = {
+    chave: "(81)999588505",
+    favorecido: "Adrielly Carolina",
+  };
+
+  const gifts = [
+    { name: "Jogo de Copos", where: "Loja X", url: "#" },
+    { name: "Pano de Prato", where: "Loja Y", url: "#" },
+    { name: "Conjunto de Tigelas", where: "Loja Z", url: "#" },
+  ];
+
+  const [now, setNow] = useState(new Date());
+  useEffect(() => {
+    const t = setInterval(() => setNow(new Date()), 1000);
+    return () => clearInterval(t);
+  }, []);
+
+  const remaining = useMemo(() => {
+    const diff = Math.max(0, eventDate.getTime() - now.getTime());
+    const sec = Math.floor(diff / 1000);
+    const days = Math.floor(sec / 86400);
+    const hours = Math.floor((sec % 86400) / 3600);
+    const minutes = Math.floor((sec % 3600) / 60);
+    const seconds = sec % 60;
+    return { days, hours, minutes, seconds };
+  }, [now, eventDate]);
+
+  const copyToClipboard = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      alert("Copiado!");
+    } catch (e) {
+      alert("Não foi possível copiar. Tente manualmente.");
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-rose-50 text-zinc-800 selection:bg-rose-200 selection:text-rose-900">
+      {/* Música de fundo (YouTube) */}
+      <iframe
+        width="0"
+        height="0"
+        src="https://www.youtube.com/embed/Rxzi3DSBs6Q?autoplay=1&loop=1&playlist=Rxzi3DSBs6Q"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+        title="Música de fundo"
+      ></iframe>
+
+      {/* HERO */}
+      <header className="relative isolate overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1920&auto=format&fit=crop"
+          alt="Mesa posta delicada"
+          className="absolute inset-0 -z-10 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/40 to-black/60" />
+
+        <div className="mx-auto max-w-5xl px-6 pt-24 pb-28 text-center text-white">
+          <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="uppercase tracking-[0.3em] text-sm/6 text-rose-100">
+            {couple.title}
+          </motion.p>
+
+          <motion.h1 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="mt-2 text-4xl md:text-6xl font-semibold drop-shadow">
+            {couple.bride} & {couple.groom}
+          </motion.h1>
+
+          <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="mt-4 text-base md:text-lg text-rose-50">
+            {couple.headline}
+          </motion.p>
+
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="mt-8 grid grid-cols-4 gap-3 md:gap-6 max-w-xl mx-auto">
+            {[["Dias", remaining.days], ["Horas", remaining.hours], ["Min", remaining.minutes], ["Seg", remaining.seconds]].map(([label, value]) => (
+              <div key={label} className="rounded-2xl bg-white/10 backdrop-blur px-2 py-4 md:px-4 md:py-6 shadow-lg">
+                <div className="text-3xl md:text-4xl font-semibold drop-shadow-sm">{String(value).padStart(2, "0")}</div>
+                <div className="text-xs uppercase tracking-widest text-rose-100">{label}</div>
+              </div>
+            ))}
+          </motion.div>
+
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="mt-10 flex items-center justify-center gap-3 flex-wrap">
+            <a href="#detalhes" className="rounded-2xl bg-white/90 text-rose-900 px-4 py-2 md:px-5 md:py-3 text-sm md:text-base font-medium shadow hover:bg-white">Ver detalhes</a>
+            <a href={contact.whatsapp} target="_blank" rel="noreferrer" className="rounded-2xl bg-rose-500/90 text-white px-4 py-2 md:px-5 md:py-3 text-sm md:text-base font-medium shadow hover:bg-rose-500">Confirmar presença (WhatsApp)</a>
+          </motion.div>
+        </div>
+      </header>
+
+      {/* Detalhes do Evento */}
+      <section className="max-w-3xl mx-auto px-6 py-10" id="detalhes">
+        <h2 className="text-2xl mb-4 font-semibold text-rose-700">Detalhes do Evento</h2>
+        <div className="mb-2">
+          <strong>Data:</strong> {eventDate.toLocaleDateString()} às {eventDate.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+        </div>
+        <div className="mb-2">
+          <strong>Local:</strong>{" "}
+          <a href={venue.mapsUrl} target="_blank" rel="noreferrer" className="text-rose-500 underline">
+            {venue.name}
+          </a>{" "}
+          ({venue.address})
+        </div>
+        <div className="mb-2 flex items-center">
+          <strong>Pix:</strong> <span className="ml-2">{pix.chave} ({pix.favorecido})</span>
+          <button
+            onClick={() => copyToClipboard(pix.chave)}
+            className="ml-3 px-2 py-1 bg-rose-500 text-white rounded text-sm"
+          >
+            Copiar chave Pix
+          </button>
+        </div>
+        {contact.form && contact.form.length > 20 && (
+          <div className="mb-2">
+            <strong>Formulário:</strong>{" "}
+            <a href={contact.form} target="_blank" rel="noreferrer" className="text-rose-500 underline">
+              Confirmar pelo formulário
+            </a>
+          </div>
+        )}
+      </section>
+
+      {/* Sugestões de Presentes */}
+      <section className="max-w-3xl mx-auto px-6 py-10" id="presentes">
+        <h2 className="text-2xl mb-4 font-semibold text-rose-700">Sugestões de Presentes</h2>
+        <ul className="space-y-2">
+          {gifts.map(gift => (
+            <li key={gift.name} className="flex items-center justify-between bg-white rounded px-4 py-2 shadow">
+              <span>{gift.name} <span className="text-xs text-zinc-500">({gift.where})</span></span>
+              {gift.url !== '#' && (
+                <a href={gift.url} target="_blank" rel="noreferrer" className="text-rose-500 underline">Ver</a>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+    </div>
+  );
+}
