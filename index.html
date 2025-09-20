@@ -43,4 +43,419 @@
             background-color: var(--beige);
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
-            box-shadow: 0 5px 15px rgba
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+
+        .header-bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+        }
+
+        .header-content p {
+            margin-bottom: 0;
+            color: var(--text-color);
+        }
+
+        .header-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            color: var(--dark-beige);
+        }
+
+        .couple-names {
+            font-family: 'Arapey', serif;
+            font-size: 4rem;
+            line-height: 1;
+            margin-bottom: 30px;
+            color: var(--dark-beige);
+        }
+
+        .intro-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--text-color);
+        }
+
+        .highlight {
+            font-weight: 700;
+            color: var(--dark-green);
+        }
+
+        .floral-element-small {
+            margin: 30px auto;
+            width: 50px;
+            height: 1px;
+            background-color: var(--dark-beige);
+            position: relative;
+            opacity: 0.5;
+        }
+
+        .floral-element-small::before,
+        .floral-element-small::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border: 1px solid var(--dark-beige);
+            border-radius: 50%;
+            top: -4px;
+        }
+
+        .floral-element-small::before {
+            left: -15px;
+        }
+
+        .floral-element-small::after {
+            right: -15px;
+        }
+
+        .invite-phrase {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 40px;
+            color: var(--text-color);
+        }
+
+        .date-info {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            margin-bottom: 30px;
+            color: var(--dark-beige);
+        }
+
+        .date-box {
+            border: 1px solid var(--dark-beige);
+            padding: 8px 15px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0 10px;
+            color: var(--dark-beige);
+        }
+
+        .day-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            line-height: 1;
+            font-weight: 700;
+            color: var(--dark-beige);
+            margin: 0 10px;
+        }
+
+        .month-name {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            line-height: 1;
+            color: var(--dark-beige);
+            margin-top: 5px;
+        }
+
+        .location-info {
+            font-size: 1rem;
+            color: var(--dark-beige);
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        section {
+            margin: 40px 0;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--dark-beige);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--dark-beige);
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: var(--dark-green);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button:hover {
+            background-color: var(--pastel-green);
+            color: var(--dark-beige);
+        }
+
+        #text-gifts-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        #text-gifts-list li {
+            background-color: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        #text-gifts-list li:hover:not(.chosen) {
+            background-color: var(--light-beige);
+            border-color: var(--pastel-green);
+        }
+
+        #text-gifts-list li.chosen {
+            background-color: rgba(205, 229, 205, 0.2);
+            border-color: var(--pastel-green);
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .gifts-container {
+            margin-top: 20px;
+        }
+
+        .pix-section {
+            background-color: rgba(205, 229, 205, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .pix-key {
+            font-family: monospace;
+            font-size: 1.2rem;
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 10px 0;
+            color: var(--text-color);
+        }
+
+        .copy-pix-button {
+            background-color: var(--dark-green);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .copy-pix-button:hover {
+            background-color: var(--pastel-green);
+            color: var(--dark-beige);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            color: var(--dark-beige);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .couple-names {
+                font-size: 3rem;
+            }
+
+            .intro-text,
+            .invite-phrase {
+                font-size: 1rem;
+            }
+
+            .day-number {
+                font-size: 3rem;
+            }
+
+            .month-name {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const textGiftsList = document.getElementById('text-gifts-list');
+            const copyPixButton = document.getElementById('copy-pix-button');
+            const pixKeyDisplay = document.getElementById('pix-key-display');
+            const phoneNumber = '5581999588505';
+
+            const gifts = [
+                'Airfryer',
+                'Alexa',
+                'Balcão aéreo',
+                'Batedeira',
+                'Conjunto de talheres',
+                'Conjunto de travessas',
+                'Conjunto de pratos',
+                'Espremedor',
+                'Ferro de passar',
+                'Jogo de copos',
+                'Jogo de edredons',
+                'Jogo de panelas',
+                'Jogo de toalhas',
+                'Liquidificador',
+                'Lustre suspenso',
+                'Contribuição para Máquina de lavar',
+                'Microondas',
+                'Organizadores',
+                'Pipoqueira',
+                'Porta temperos',
+                'Puff para descanso',
+                'Sanduicheira',
+                'Vasos decorativos'
+            ];
+
+            const chosenGiftsKey = 'chosenGifts';
+
+            function loadChosenGifts() {
+                const chosenGifts = localStorage.getItem(chosenGiftsKey);
+                return chosenGifts ? JSON.parse(chosenGifts) : [];
+            }
+
+            function saveChosenGift(giftName) {
+                const chosenGifts = loadChosenGifts();
+                if (!chosenGifts.includes(giftName)) {
+                    chosenGifts.push(giftName);
+                    localStorage.setItem(chosenGiftsKey, JSON.stringify(chosenGifts));
+                }
+            }
+
+            function renderGifts() {
+                textGiftsList.innerHTML = '';
+                const chosenGifts = loadChosenGifts();
+
+                const giftsToDisplay = gifts.filter(giftName => {
+                    const isPixOrContribution = giftName === 'Presente via PIX' || giftName.includes('Contribuição');
+                    return !chosenGifts.includes(giftName) || isPixOrContribution;
+                });
+
+                giftsToDisplay.forEach(giftName => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = giftName;
+                    listItem.setAttribute('data-gift-name', giftName);
+                    listItem.addEventListener('click', function() {
+                        chooseGift(giftName);
+                    });
+                    textGiftsList.appendChild(listItem);
+                });
+            }
+
+            function chooseGift(giftName) {
+                const guestName = prompt("Para confirmar sua escolha, por favor, digite seu nome:");
+                if (guestName && guestName.trim() !== "") {
+                    const message = `${guestName} escolheu te presentear com ${giftName}.`;
+                    
+                    // Remove o presente da lista e salva no localStorage
+                    saveChosenGift(giftName);
+                    renderGifts();
+                    
+                    // Abre o WhatsApp para enviar a notificação
+                    sendToWhatsApp(message);
+                    
+                    alert(`Obrigado, ${guestName}! Sua escolha foi registrada e a notificação foi enviada.`);
+                } else {
+                    alert("Nome inválido. A escolha não foi registrada.");
+                }
+            }
+
+            function sendToWhatsApp(message) {
+                const encodedMessage = encodeURIComponent(message);
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+                window.open(whatsappUrl, '_blank').focus();
+            }
+
+            copyPixButton.addEventListener('click', function() {
+                const pixKey = pixKeyDisplay.textContent;
+                navigator.clipboard.writeText(pixKey).then(() => {
+                    alert('Chave PIX copiada para a área de transferência!');
+                }).catch(err => {
+                    console.error('Erro ao copiar a chave PIX:', err);
+                    alert('Não foi possível copiar a chave PIX. Por favor, copie manualmente: ' + pixKey);
+                });
+            });
+
+            // Adicione a opção "Presente via PIX" à lista de presentes, se necessário
+            const pixGiftName = 'Presente via PIX';
+            if (!gifts.includes(pixGiftName)) {
+                gifts.unshift(pixGiftName);
+            }
+            
+            renderGifts();
+        });
+    </script>
+</body>
+</html>
