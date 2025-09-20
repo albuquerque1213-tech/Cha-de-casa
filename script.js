@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const phoneNumber = '5581999588505';
 
     const gifts = [
-        'Airfryer',
+        'Presente via PIX',
+'Airfryer',
 'Alexa',
 'Balcão aéreo',
 'Batedeira',
