@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'Pipoqueira',
         'Porta temperos',
         'Puff para descanso',
-        'Vasos decorativos'
+        'Vasos decorativos',
+         'Lixeira'
     ];
 
     const chosenGiftsKey = 'chosenGifts';
