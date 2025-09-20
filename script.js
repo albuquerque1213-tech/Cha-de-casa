@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'Pipoqueira',
         'Porta temperos',
         'Puff para descanso',
-        'Vasos decorativos',
+        'Vasos Testedecorativos',
          'Lixeira'
     ];
 
