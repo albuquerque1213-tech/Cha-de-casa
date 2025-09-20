@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'Porta temperos',
         'Puff para descanso',
         'Vasos Testedecorativos',
-         'Lixeira'
+         'tedte2'
     ];
 
     const chosenGiftsKey = 'chosenGifts';
