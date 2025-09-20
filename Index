@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chá de Casa Nova - Adrielly & Lucas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&family=Great+Vibes&family=Arapey:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <p class="header-tag">CHÁ DE CASA NOVA</p>
+                <h1 class="couple-names">Adrielly & Lucas</h1>
+                <p class="intro-text">
+                    Escolha como deseja nos presentear:
+                </p>
+            </div>
+        </header>
+
+        <section id="gifts-section">
+            <ul id="text-gifts-list">
+            </ul>
+            <div class="pix-section">
+                <h3>Prefere presentear via PIX?</h3>
+                <p>Caso prefira, pode nos presentear via PIX:</p>
+                <div id="pix-key-display" class="pix-key">81999588505</div>
+                <button id="copy-pix-button" class="copy-pix-button">Copiar Chave PIX</button>
+                <p>Adrielly Carolina - Banco PicPay</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Adrielly & Lucas - Obrigado por fazer parte da nossa história!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
