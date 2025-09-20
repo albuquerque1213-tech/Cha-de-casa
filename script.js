@@ -58,30 +58,26 @@ document.addEventListener('DOMContentLoaded', function() {
             const listItem = document.createElement('li');
             listItem.textContent = giftName;
             listItem.setAttribute('data-gift-name', giftName);
-
-            const isPixOrContribution = giftName === 'Presente via PIX' || giftName.includes('Contribuição');
-
             listItem.addEventListener('click', function() {
-                chooseGift(giftName, isPixOrContribution);
+                chooseGift(giftName);
             });
-
             textGiftsList.appendChild(listItem);
         });
     }
 
-    function chooseGift(giftName, isMultipleSelectionAllowed) {
+    function chooseGift(giftName) {
         const guestName = prompt("Para confirmar sua escolha, por favor, digite seu nome:");
         if (guestName && guestName.trim() !== "") {
             const message = `${guestName} escolheu te presentear com ${giftName}.`;
+            
+            // Remove o presente da lista e salva no localStorage
+            saveChosenGift(giftName);
+            renderGifts();
+            
+            // Abre o WhatsApp para enviar a notificação
             sendToWhatsApp(message);
             
-            if (!isMultipleSelectionAllowed) {
-                saveChosenGift(giftName);
-                renderGifts(); 
-            }
-
             alert(`Obrigado, ${guestName}! Sua escolha foi registrada e a notificação foi enviada.`);
-
         } else {
             alert("Nome inválido. A escolha não foi registrada.");
         }
