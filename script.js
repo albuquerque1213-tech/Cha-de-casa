@@ -14,11 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
         'Conjunto de pratos',
         'Espremedor',
         'Ferro de passar',
-        'Jogo de copos',
         'Jogo de edredons',
         'Jogo de panelas',
         'Jogo de toalhas',
-        'Liquidificador',
         'Lustre suspenso',
         'Contribuição para Máquina de lavar',
         'Microondas',
@@ -26,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
         'Pipoqueira',
         'Porta temperos',
         'Puff para descanso',
-        'Sanduicheira',
         'Vasos decorativos'
     ];
 
