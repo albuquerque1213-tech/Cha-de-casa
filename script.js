@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const gifts = [
         'Airfryer',
-        'Alexa',
+        'Alsdasdasdasdsadasdasdasdasdsadexa',
         'Balcão aéreo',
         'Batedeira',
         'Conjunto de talheres',
