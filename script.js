@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 'Founde',
 'Frigideira de Cerâmica',
 'Frigideira de Aço Inox',
+'Lençol',
 'Lustre suspenso',
 'Organizadores de mantimentos (cozinha)',
 'Panela de Pressão',
