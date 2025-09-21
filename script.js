@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
 'Frigideira de Cerâmica',
 'Frigideira de Aço Inox',
 'Lustre suspenso',
-'Microondas',
 'Organizadores de mantimentos (cozinha)',
 'Panela de Pressão',
 'Pipoqueira',
