@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
 'Conjunto de Almofadas',
 'Kit de ferramentas',
 'Mangueira de Jardim',
-'Lixeira',
 'Afiador de facas',
 'Espelho',
 'Churrasqueira'
