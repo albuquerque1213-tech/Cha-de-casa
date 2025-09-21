@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
 'Conjunto de toalhas de banho',
 'Conjunto de travessas',
 'Contribuição para Máquina de lavar',
-'Espremedor',
 'Founde',
 'Frigideira de Cerâmica',
 'Frigideira de Aço Inox',
